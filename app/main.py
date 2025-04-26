@@ -30,10 +30,8 @@ class FlyingRobot(BaseRobot):
     def __init__(self, name, weight, coords=None):
         if coords is None:
             coords = [0, 0, 0]
-
-            if len(coords) == 2:
-
-                coords.append(0)
+        elif len(coords) == 2:
+            coords.append(0)
         super().__init__(name, weight, coords)
 
 
